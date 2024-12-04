@@ -9,5 +9,5 @@ export default defineConfig({
       plugins: [tailwindcss()],
     },
   },
-  base: "/weather-task/",
+  base: "/weather-task",
 });
