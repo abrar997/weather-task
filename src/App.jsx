@@ -48,20 +48,20 @@ function App() {
   }, [cityName]);
 
   return (
-    <div className="flex items-center justify-center bg-gradient-to-t from-[#250c25fb] to-[#000000e5] lg:h-screen font-main p-4 lg:px-0">
-      <div className="shadow-lg rounded bg-[#32323441] text-white lg:w-[75%]">
+    <div className="flex lg:items-center lg:justify-center lg:h-screen h-full font-main p-4 lg:px-0 bg-gradient-to-t from-[#250c25fb] to-[#000000e5]">
+      <div className="shadow-lg lg:rounded lg:bg-[#32323441] text-white lg:w-[75%]">
         <div className="grid lg:grid-cols-4">
-          <div className="relative h-[650px]  col-span-2">
+          <div className="relative lg:h-[650px] text-center col-span-2">
             <img
               src="https://image.lexica.art/full_webp/bd7bdccd-ea86-429f-b2e2-3f6a362fe42c"
               alt=""
               className="rounded w-full h-full object-cover"
             />
-            <div className="absolute inset-0  bg-gradient-to-t from-[#863786d1] to-[#000000c2] backdrop-blur-[2px] flex flex-col items-center justify-center">
+            <div className="absolute inset-0 pt-12 lg:py-0 bg-gradient-to-t from-[#863786d1] to-[#000000c2] lg:backdrop-blur-[2px] flex flex-col items-center justify-center">
               <h1 className="text-xl text-slate-100 font-semibold">
                 Welcome to
               </h1>
-              <h1 className="font-bold px-6 text-5xl capitalize font-secondary">
+              <h1 className="font-bold px-6 lg:text-5xl text-3xl capitalize font-secondary">
                 Weather app
               </h1>
               <p className="font-secondary text-center text-sm mt-3">
@@ -70,7 +70,7 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="py-12 px-4 font-secondary col-span-2 grid gap-6">
+          <div className="lg:py-12 pt-6 px-4 font-secondary col-span-2 grid gap-6">
             <form
               action=""
               className="w-full flex justify-center items-start"
@@ -81,7 +81,7 @@ function App() {
                 value={cityName}
                 onChange={(e) => setCityName(e.target.value)}
                 placeholder="search a weather of your country ... "
-                className="bg-[#32323441] border px-2 py-2 placeholder:text-sm rounded border-slate-400 focus:outline-none w-[80%] "
+                className="bg-[#32323441] border px-2 py-2 placeholder:text-sm rounded border-slate-400 focus:outline-none lg:w-[80%] "
               />
             </form>
             {data && data.main && cityName ? (

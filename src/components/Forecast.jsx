@@ -7,7 +7,7 @@ const Forecast = ({ forecast, cityName }) => {
 
   return (
     <>
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid lg:grid-cols-5 grid-cols-3 gap-4">
         {forecast.slice(0, 5).map((item, index) => {
           const dayName = new Date(item.dt_txt).toLocaleDateString("en-US", {
             weekday: "long",

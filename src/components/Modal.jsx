@@ -16,7 +16,7 @@ export default function Modal({ isOpen, onclose, item, cityName }) {
         <div className="flex min-h-full items-center justify-center p-4">
           <DialogPanel
             transition
-            className="w-full flex flex-col gap-3 capitalize max-w-md rounded-xl p-6 backdrop-blur-3xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+            className="w-full flex flex-col gap-3 capitalize max-w-md rounded-xl lg:p-6 p-4 backdrop-blur-[130px] duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
           >
             <div className="flex flex-col">
               <div>
@@ -32,7 +32,7 @@ export default function Modal({ isOpen, onclose, item, cityName }) {
                 <h1 className="text-[10px] text-slate-300">{item.dt_txt}</h1>
               </div>
               <div className="items-center flex flex-col">
-                <h1 className="text-3xl font-main text-white flex gap-1 relative">
+                <h1 className="lg:text-3xl text-2xl font-main text-white flex gap-1 relative">
                   <span className="relative">{Math.floor(item.main.temp)}</span>
                   <span className="text-sm ml-7 -top-1.5 absolute">°</span>C
                 </h1>
@@ -41,18 +41,18 @@ export default function Modal({ isOpen, onclose, item, cityName }) {
                 </span>
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-6">
-              <div className="text-white text-[16px] items-center text-center grid gap-2 p-2 rounded">
+            <div className="grid lg:grid-cols-3 lg:gap-6">
+              <div className="text-white text-[16px] lg:items-center lg:text-center flex justify-between lg:grid gap-2 p-2 rounded">
                 <h1 className="flex items-center gap-2">
                   <IoSunnySharp className="text-slate-100" />
                   feels like
                 </h1>
-                <span className="text-slate-50 flex gap-1 relative justify-center">
+                <span className="text-slate-50 flex gap-1 relative lg:justify-center">
                   {Math.floor(item.main.feels_like)}
                   <span className="text-sm -top-1 ml-2 absolute">°</span>C{" "}
                 </span>
               </div>
-              <div className="text-white text-[16px] items-center text-center grid gap-2  p-2 rounded">
+              <div className="text-white text-[16px] lg:items-center lg:text-center flex justify-between lg:grid  gap-2  p-2 rounded">
                 <h1 className="flex items-center">
                   <WiHumidity />
                   humidity
@@ -61,7 +61,7 @@ export default function Modal({ isOpen, onclose, item, cityName }) {
                   {Math.floor(item.main.humidity)}%
                 </span>
               </div>
-              <div className="text-white text-[16px] items-center text-center grid gap-2  p-2 rounded">
+              <div className="text-white text-[16px] lg:items-center lg:text-center flex justify-between lg:grid  gap-2  p-2 rounded">
                 <h1 className="flex items-center gap-2">
                   <GiPush />
                   pressure

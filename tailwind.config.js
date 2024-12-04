@@ -7,6 +7,9 @@ export default {
         main: '"Poppins", serif',
         secondary: '"Inter", sans-serif',
       },
+      colors: {
+        conditionBg: "#352f3574",
+      },
     },
   },
   plugins: [],
