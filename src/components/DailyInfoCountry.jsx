@@ -1,7 +1,7 @@
 const DailyInfoCountry = ({ data }) => {
   return (
     <div className="flex flex-col">
-      <div className="grid items-center justify-center text-center gap-2 rounded">
+      <div className="grid items-center lg:justify-center text-center gap-2 rounded">
         <img
           src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
           className="m-auto rounded"
@@ -13,7 +13,9 @@ const DailyInfoCountry = ({ data }) => {
         </h1>
         <div>
           <h1 className="text-slate-300 text-[16px] font-main">{data.name}</h1>
-          <p className="text-slate-500">{data.weather[0].description}</p>
+          <p className="text-slate-400 text-opacity-70 font-light">
+            {data.weather[0].description}
+          </p>
         </div>
         <div className="mt-4">
           <div className="grid grid-cols-3 lg:gap-6 gap-2 text-sm capitalize">

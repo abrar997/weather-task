@@ -42,7 +42,7 @@ export default function Modal({ isOpen, onclose, item, cityName }) {
               </div>
             </div>
             <div className="grid lg:grid-cols-3 lg:gap-6">
-              <div className="text-white text-[16px] lg:items-center lg:text-center flex justify-between lg:grid gap-2 p-2 rounded">
+              <div className="text-white text-[16px] lg:items-center lg:text-center flex justify-between lg:grid gap-2 lg:p-2 rounded">
                 <h1 className="flex items-center gap-2">
                   <IoSunnySharp className="text-slate-100" />
                   feels like

@@ -7,7 +7,7 @@ function App() {
   const [cityName, setCityName] = useState("");
   const [data, setData] = useState(null);
   const [forecast, setForecast] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
+
   async function FetchApi() {
     try {
       if (!cityName) return null;
@@ -48,16 +48,16 @@ function App() {
   }, [cityName]);
 
   return (
-    <div className="flex lg:items-center lg:justify-center lg:h-screen h-full font-main p-4 lg:px-0 bg-gradient-to-t from-[#250c25fb] to-[#000000e5]">
+    <div className="flex lg:items-center lg:justify-center lg:h-screen h-full font-main lg:px-0 bg-gradient-to-t  from-[#250c2575] to-[#1d0219e5]">
       <div className="shadow-lg lg:rounded lg:bg-[#32323441] text-white lg:w-[75%]">
-        <div className="grid lg:grid-cols-4">
-          <div className="relative lg:h-[650px] text-center col-span-2">
+        <div className="grid lg:grid-cols-4 gap-4">
+          <div className="relative lg:h-[680px] text-center col-span-2">
             <img
               src="https://image.lexica.art/full_webp/bd7bdccd-ea86-429f-b2e2-3f6a362fe42c"
               alt=""
-              className="rounded w-full h-full object-cover"
+              className="rounded w-full lg:h-full h-screen object-cover"
             />
-            <div className="absolute inset-0 pt-12 lg:py-0 bg-gradient-to-t from-[#863786d1] to-[#000000c2] lg:backdrop-blur-[2px] flex flex-col items-center justify-center">
+            <div className="lg:absolute inset-0 hidden pt-12 lg:py-0 bg-gradient-to-t from-[#863786d1] to-[#000000c2] lg:backdrop-blur-[1px] lg:flex flex-col items-center justify-center">
               <h1 className="text-xl text-slate-100 font-semibold">
                 Welcome to
               </h1>
@@ -70,7 +70,11 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="lg:py-12 pt-6 px-4 font-secondary col-span-2 grid gap-6">
+          <div className="lg:py-12 pt-6 px-4 bg-[#110a20da] lg:bg-transparent font-secondary col-span-2 lg:grid gap-6 absolute inset-0 lg:static">
+            <h1 className="text-2xl text-slate-100 font-semibold text-center py-4 lg:hidden">
+              Weather app
+            </h1>
+
             <form
               action=""
               className="w-full flex justify-center items-start"
