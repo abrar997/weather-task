@@ -9,6 +9,7 @@ export default {
       },
       colors: {
         conditionBg: "#352f3574",
+        conditionBgMobile: "#352f3574",
       },
     },
   },

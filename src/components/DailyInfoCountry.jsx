@@ -1,7 +1,7 @@
 const DailyInfoCountry = ({ data }) => {
   return (
     <div className="flex flex-col">
-      <div className="grid items-center lg:justify-center text-center gap-2 rounded">
+      <div className="grid items-center lg:justify-center text-center lg:gap-2 rounded">
         <img
           src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
           className="m-auto rounded"
@@ -17,7 +17,7 @@ const DailyInfoCountry = ({ data }) => {
             {data.weather[0].description}
           </p>
         </div>
-        <div className="mt-4">
+        <div className="lg:mt-4 mt-2">
           <div className="grid grid-cols-3 lg:gap-6 gap-2 text-sm capitalize">
             <div className="text-slate-300 grid gap-2 bg-conditionBg lg:p-2 p-1 rounded">
               <h1>feels like</h1>

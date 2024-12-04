@@ -16,7 +16,7 @@ export default function Modal({ isOpen, onclose, item, cityName }) {
         <div className="flex min-h-full items-center justify-center p-4">
           <DialogPanel
             transition
-            className="w-full flex flex-col gap-3 capitalize max-w-md rounded-xl lg:p-6 p-4 backdrop-blur-[130px] duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+            className="w-full flex flex-col gap-3 capitalize max-w-md rounded-xl lg:p-6 p-4 backdrop-blur-[40px] duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
           >
             <div className="flex flex-col">
               <div>
@@ -41,7 +41,7 @@ export default function Modal({ isOpen, onclose, item, cityName }) {
                 </span>
               </div>
             </div>
-            <div className="grid lg:grid-cols-3 lg:gap-6">
+            <div className="grid lg:grid-cols-3 lg:gap-6 gap-2">
               <div className="text-white text-[16px] lg:items-center lg:text-center flex justify-between lg:grid gap-2 lg:p-2 rounded">
                 <h1 className="flex items-center gap-2">
                   <IoSunnySharp className="text-slate-100" />
@@ -52,7 +52,7 @@ export default function Modal({ isOpen, onclose, item, cityName }) {
                   <span className="text-sm -top-1 ml-2 absolute">°</span>C{" "}
                 </span>
               </div>
-              <div className="text-white text-[16px] lg:items-center lg:text-center flex justify-between lg:grid  gap-2  p-2 rounded">
+              <div className="text-white text-[16px] lg:items-center lg:text-center flex justify-between lg:grid gap-2 lg:p-2 rounded">
                 <h1 className="flex items-center">
                   <WiHumidity />
                   humidity
@@ -61,7 +61,7 @@ export default function Modal({ isOpen, onclose, item, cityName }) {
                   {Math.floor(item.main.humidity)}%
                 </span>
               </div>
-              <div className="text-white text-[16px] lg:items-center lg:text-center flex justify-between lg:grid  gap-2  p-2 rounded">
+              <div className="text-white text-[16px] lg:items-center lg:text-center flex justify-between lg:grid gap-2 lg:p-2 rounded">
                 <h1 className="flex items-center gap-2">
                   <GiPush />
                   pressure

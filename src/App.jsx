@@ -48,7 +48,7 @@ function App() {
   }, [cityName]);
 
   return (
-    <div className="flex lg:items-center lg:justify-center lg:h-screen h-full font-main lg:px-0 bg-gradient-to-t  from-[#250c2575] to-[#1d0219e5]">
+    <div className="flex lg:items-center lg:justify-center lg:h-screen h-full font-main lg:px-0 bg-gradient-to-t  from-[#020102bf] to-[#10020d6f]">
       <div className="shadow-lg lg:rounded lg:bg-[#32323441] text-white lg:w-[75%]">
         <div className="grid lg:grid-cols-4 gap-4">
           <div className="relative lg:h-[680px] text-center col-span-2">
@@ -70,7 +70,7 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="lg:py-12 pt-6 px-4 bg-[#110a20da] lg:bg-transparent font-secondary col-span-2 lg:grid gap-6 absolute inset-0 lg:static">
+          <div className="lg:py-12 pt-6 px-4 bg-[#0f0523e3] lg:bg-transparent font-secondary col-span-2 lg:grid flex flex-col lg:gap-6 absolute inset-0 lg:static">
             <h1 className="text-2xl text-slate-100 font-semibold text-center py-4 lg:hidden">
               Weather app
             </h1>
@@ -85,18 +85,18 @@ function App() {
                 value={cityName}
                 onChange={(e) => setCityName(e.target.value)}
                 placeholder="search a weather of your country ... "
-                className="bg-[#32323441] border px-2 py-2 placeholder:text-sm rounded border-slate-400 focus:outline-none lg:w-[80%] "
+                className="bg-[#32323441] border px-2 py-2 placeholder:text-sm rounded border-slate-400 focus:outline-none lg:w-[80%] w-full"
               />
             </form>
             {data && data.main && cityName ? (
-              <>
+              <div className="flex flex-col gap-3">
                 <DailyInfoCountry data={data} />
                 {forecast && (
                   <Forecast forecast={forecast} cityName={cityName} />
                 )}
-              </>
+              </div>
             ) : (
-              <p className="text-center text-sm text-gray-500 font-secondary">
+              <p className="text-center text-sm text-gray-500 font-secondary hidden lg:flex mt-3 lg:mt-0">
                 please enter your country
               </p>
             )}
