@@ -5,6 +5,7 @@ import Modal from "./Modal";
 const Forecast = ({ forecast, cityName }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
+
   const openModal = (item) => {
     setSelectedItem(item);
     setIsOpen(true);
@@ -13,8 +14,9 @@ const Forecast = ({ forecast, cityName }) => {
     setSelectedItem(null);
     setIsOpen(false);
   };
+
   return (
-    <div className="lg:bg-transparent bg-conditionBg px-2 lg:px-0">
+    <div className="lg:bg-transparent bg-conditionBg px-2 lg:px-0 lg:mt-6">
       <h1 className="lg:hidden capitalize text-center mt-4 pt-4 rounded">
         forecast
       </h1>

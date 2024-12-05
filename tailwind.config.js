@@ -8,8 +8,8 @@ export default {
         secondary: '"Inter", sans-serif',
       },
       colors: {
-        conditionBg: "#352f3574",
-        conditionBgMobile: "#352f3574",
+        conditionBg: "#3a383a84",
+        conditionBgMobile: "#3a383a84",
       },
     },
   },
