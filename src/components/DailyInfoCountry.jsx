@@ -19,20 +19,20 @@ const DailyInfoCountry = ({ data }) => {
         </div>
         <div className="lg:mt-4 mt-2">
           <div className="grid grid-cols-3 lg:gap-6 gap-2 text-sm capitalize">
-            <div className="text-slate-300 grid gap-2 bg-conditionBg lg:p-2 p-1 rounded">
+            <div className="text-slate-300 grid gap-2 lg:bg-conditionBg bg-conditionBgMobile lg:p-2 p-1 rounded">
               <h1>feels like</h1>
               <span className="text-slate-50 flex gap-1 relative justify-center">
                 {Math.floor(data.main.feels_like)}
                 <span className="text-sm -top-1 ml-4 absolute">°</span>
               </span>
             </div>
-            <div className="text-slate-300 grid gap-2 bg-conditionBg lg:p-2 p-1 rounded">
+            <div className="text-slate-300 grid gap-2 lg:bg-conditionBg bg-conditionBgMobile lg:p-2 p-1 rounded">
               <h1>humidity</h1>
               <span className="text-slate-50">
                 {Math.floor(data.main.humidity)}%
               </span>
             </div>
-            <div className="text-slate-300 grid gap-2 bg-conditionBg lg:p-2 p-1 rounded">
+            <div className="text-slate-300 grid gap-2 lg:bg-conditionBg bg-conditionBgMobile lg:p-2 p-1 rounded">
               <h1>pressure</h1>
               <span className="text-slate-50">
                 {Math.floor(data.main.pressure)}

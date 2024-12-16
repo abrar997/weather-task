@@ -16,8 +16,8 @@ const Forecast = ({ forecast, cityName }) => {
   };
 
   return (
-    <div className="lg:bg-transparent bg-conditionBg px-2 lg:px-0 lg:mt-6">
-      <h1 className="lg:hidden capitalize text-center mt-4 pt-4 rounded">
+    <div className="lg:bg-transparent bg-conditionBgMobile px-2 lg:px-0 lg:mt-6">
+      <h1 className="lg:hidden capitalize text-center mt-4 lg:pt-4 pt-2 rounded">
         forecast
       </h1>
       <div className="grid lg:grid-cols-5 lg:gap-4 gap-3">
@@ -31,7 +31,7 @@ const Forecast = ({ forecast, cityName }) => {
                 className={`group lg:grid flex justify-between items-center w-full ${
                   index === 4
                     ? ""
-                    : "lg:border-0 border-b border-slate-500 border-opacity-30"
+                    : "lg:border-0 border-b border-slate-300 border-opacity-30"
                 }`}
               >
                 <div className="lg:grid flex items-center">
@@ -45,11 +45,13 @@ const Forecast = ({ forecast, cityName }) => {
                   <h1 className="text-[12px] hidden lg:flex">{dayName}</h1>
                   <h1 className="text-[12px] flex relative gap-1">
                     {Math.floor(item.main.temp)}
-                    <span className="text-sm -top-1 ml-4 absolute">°</span>
+                    <span className="text-sm lg:-top-1 -top-2 lg:ml-4 ml-2 absolute">
+                      °
+                    </span>
                   </h1>
                   <button
                     onClick={() => openModal(item)}
-                    className="opacity-0 group-hover:opacity-100 transition-all duration-300"
+                    className="lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300"
                   >
                     <MdExpandMore />
                   </button>

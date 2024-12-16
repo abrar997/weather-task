@@ -68,7 +68,7 @@ function App() {
 
   return (
     <div className="flex lg:items-center lg:justify-center lg:h-screen h-full font-main lg:px-0 bg-gradient-to-t  from-[#020102bf] to-[#10020d6f]">
-      <div className="shadow-lg lg:rounded lg:bg-[#302a30d1] text-white lg:w-[75%]">
+      <div className="shadow-mb lg:rounded lg:bg-[#2c182c6f] text-white lg:w-[75%]">
         <div className="grid lg:grid-cols-4 gap-4">
           <div className="relative  lg:h-[680px] text-center lg:col-span-2">
             <img
@@ -76,7 +76,7 @@ function App() {
               alt=""
               className="rounded flex w-screen lg:w-full lg:h-full h-screen object-cover"
             />
-            <div className="lg:absolute inset-0 hidden pt-12 lg:py-0 bg-gradient-to-t from-[#863786d1] to-[#000000c2] lg:backdrop-blur-[1px] lg:flex flex-col items-center justify-center">
+            <div className="lg:absolute inset-0 hidden pt-12 lg:py-0 bg-gradient-to-t from-[#863786a9] to-[#000000c2] lg:backdrop-blur-[1px] lg:flex flex-col items-center justify-center">
               <h1 className="text-xl text-slate-100 font-semibold">
                 Welcome to
               </h1>
